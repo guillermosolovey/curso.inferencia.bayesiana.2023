@@ -5,7 +5,7 @@ website:
   title: "Estimación bayesiana"
   navbar:
     pinned: true
-    background: "#1F7349"
+    background: "#F0DC14"
     right:
       - href: index.qmd
         text: Home

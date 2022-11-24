@@ -12,26 +12,26 @@ library(fontawesome)
 
 {{< var course.aviso >}}
 
-### Docente
+#### Docente
 
 - Docente: {{< var instructor.name >}}
 - Oficina: {{< var instructor.office >}}
 
-### Fechas
+#### Fechas
 
 - Dictado: {{< var course.semester >}}
 - Horarios: {{< var course.time >}}
 
-### Correlativas
+#### Correlativas
 
 - {{< var course.correlativas >}}
 
-### Código de inscripción en el SIU
+#### Código de inscripción en el SIU
 
 - Grado: {{< var course.siugrado >}}
 - Doctorado: {{< var course.siudoctorado >}}
 
-### Bibliografía
+#### Bibliografía
 
 - {{< var course.text >}}
 
