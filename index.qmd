@@ -6,35 +6,37 @@ toc: false
 sidebar: false
 ---
 
-### Docente
-
-Docente: {{< var instructor.name >}}
-
-### Horarios
-
-A definir
-
-### Bibliografía
-
-{{< var course.text >}}
-
-### tests
-
-
-```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
 library(fontawesome)
 ```
 
-# PRUEBAS `r fa("font-awesome-logo-full", fill = "forestgreen")`
+{{< var course.aviso >}}
 
-It works well in headings...
+### Docente
 
-# `r fa("university", fill = "steelblue")` H1 Heading
+- Docente: {{< var instructor.name >}}
+- Oficina: {{< var instructor.office >}}
 
-## `r fa("r-project", fill = "steelblue")` H2 Heading
+### Fechas
 
-### `r fa("r-project", fill = "steelblue")` H3 Heading
+- Dictado: {{< var course.semester >}}
+- Horarios: {{< var course.time >}}
 
-#### `r fa("r-project", fill = "steelblue")` H4 Heading
+### Correlativas
 
-##### `r fa("r-project", fill = "steelblue")` H5 Heading
+- {{< var course.correlativas >}}
+
+### Código de inscripción en el SIU
+
+- Grado: {{< var course.siugrado >}}
+- Doctorado: {{< var course.siudoctorado >}}
+
+### Bibliografía
+
+- {{< var course.text >}}
+
+------------------------------------------------------------------------
+
+###### `r fa("university", fill = "steelblue")` [{{< var school.name >}}]({{< var school.url >}})
+
+###### `r fa("university", fill = "steelblue")` [{{< var university.name >}}]({{< var university.url >}})
