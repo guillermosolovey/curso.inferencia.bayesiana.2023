@@ -25,7 +25,7 @@ A definir
 library(fontawesome)
 ```
 
-# Just a few tests with `r fa("font-awesome-logo-full", fill = "forestgreen")`
+# PRUEBAS `r fa("font-awesome-logo-full", fill = "forestgreen")`
 
 It works well in headings...
 
