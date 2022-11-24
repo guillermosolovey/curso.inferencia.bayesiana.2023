@@ -1,0 +1,40 @@
+---
+title: "{{< var course.title >}}"
+subtitle: "{{< var course.subtitle >}}"
+title-block-banner: "img/head.jpg"
+toc: false
+sidebar: false
+---
+
+### Docente
+
+Docente: {{< var instructor.name >}}
+
+### Horarios
+
+A definir
+
+### Bibliografía
+
+{{< var course.text >}}
+
+### tests
+
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
+# Just a few tests with `r fa("font-awesome-logo-full", fill = "forestgreen")`
+
+It works well in headings...
+
+# `r fa("university", fill = "steelblue")` H1 Heading
+
+## `r fa("r-project", fill = "steelblue")` H2 Heading
+
+### `r fa("r-project", fill = "steelblue")` H3 Heading
+
+#### `r fa("r-project", fill = "steelblue")` H4 Heading
+
+##### `r fa("r-project", fill = "steelblue")` H5 Heading

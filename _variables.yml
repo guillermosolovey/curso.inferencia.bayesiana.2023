@@ -1,0 +1,34 @@
+author: Guillermo Solovey
+
+instructor:
+  name: Dr. Guillermo Solovey
+  name_no_title: Guillermo Solovey
+  email: gsolovey@gmail.com
+  url: "https://gsolovey.netlify.app"
+  twitter: gsolovey
+  github: guillermosolovey
+  office: "2605, Cero+Infinito"
+  officehrs: "a definir"
+  appointment_url: proximamente
+
+course:
+  title: "Introducción al análisis de datos bayesiano"
+  subtitle: "Este curso es una introducción al análisis de datos bayesiano usando cómputos estadísticos en R."
+  number: "12345"
+  semester: "Primer cuatrimestre 2023"
+  time1: "6 horas semanales en horario a definir"
+  location: "A definir"
+  github: "https://github.com/sta-112-f22/website"
+  url: "https://sta-112-f22.github.io/website"
+  copyright_year: "2023"
+  text: | 
+    sddsfd > 
+    34545
+  
+university:
+  name: Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires
+  url: "https://exactas.uba.ar"
+
+school:
+  name: Instituto de Cálculo
+  url: "https://ic.fcen.uba.ar"

@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "Inferencia bayesiana"
+  navbar:
+    pinned: true
+    background: "#1F7349"
+    right:
+      - href: index.qmd
+        text: Home
+
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
