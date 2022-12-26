@@ -9,6 +9,8 @@ website:
     right:
       - href: index.qmd
         text: Home
+      - href: programa.qmd
+        text: Programa
 
 
 

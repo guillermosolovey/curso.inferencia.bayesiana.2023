@@ -1,0 +1,14 @@
+---
+title: "{{< var course.title >}}"
+subtitle: "{{< var course.subtitle >}}"
+title-block-banner: "img/head.jpg"
+toc: false
+sidebar: false
+---
+
+#### Programa
+
+#### Docente
+  
+-   Docente: {{< var instructor.name >}}
+-   Oficina: {{< var instructor.office >}}
