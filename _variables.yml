@@ -7,25 +7,25 @@ instructor:
   url: "https://gsolovey.netlify.app"
   twitter: gsolovey
   github: guillermosolovey
-  office: "2605, Cero+Infinito."
+  office: "2605, Edificio Cero+Infinito, Exactas-UBA"
   officehrs: "a definir"
   appointment_url: próximamente
 
 course:
   title: "Estimación Bayesiana"
-  subtitle: "Introducción al análisis de datos y la inferencia bayesiana usando cómputos estadísticos en R."
-  aviso: "Materia electiva del ciclo superior de la Licenciatura en Ciencia de Datos (LCD) y optativa de doctorado."
+  subtitle: "Introducción a la estadística bayesiana con un enfoque computacional"
+  aviso: "Materia electiva de la [Licenciatura en Ciencia de Datos](https://lcd.exactas.uba.ar/) y 
+          optativa de doctorado."
+  inscripcion: "desde el 22 de Febrero al 5 de Marzo de 2023."
   siugrado: "a definir"
   siudoctorado: "a definir"
   correlativas: "Introducción a la Estadística y la Ciencia de Datos."
-  semester: "Primer cuatrimestre 2023."
-  time: "4 horas semanales en horario a definir."
+  semester: "Primer cuatrimestre 2023. Inicio de clases: semana del 20 de Marzo."
+  time: "4 horas semanales en días y horario a definir."
   location: "A definir"
   github: "https://github.com/guillermosolovey/curso.inferencia.bayesiana.2023"
   url: "https://bayes2023.netlify.app/"
   copyright_year: "2023"
-  text: Vamos a usar principalmente [Bayes Rules!](https://www.bayesrulesbook.com/) y 
-        [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/).
         
 university:
   name: Facultad de Ciencias Exactas y Naturales, UBA
