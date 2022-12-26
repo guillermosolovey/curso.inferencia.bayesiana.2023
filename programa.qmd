@@ -8,7 +8,4 @@ sidebar: false
 
 #### Programa
 
-#### Docente
-  
--   Docente: {{< var instructor.name >}}
--   Oficina: {{< var instructor.office >}}
+próximamente
