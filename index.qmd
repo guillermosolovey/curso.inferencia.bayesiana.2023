@@ -14,7 +14,9 @@ library(gt)
 library(tidyverse)
 gs4_deauth()
 
-course_info <- read_sheet("https://docs.google.com/spreadsheets/d/1ijXkRRscKCg-s2V425YP4hEw57b8qQTCU_a7pgMnOWQ/edit?usp=sharing", col_names = c('a','b'))
+#course_info <- read_sheet("https://docs.google.com/spreadsheets/d/1ijXkRRscKCg-s2V425YP4hEw57b8qQTCU_a7pgMnOWQ/edit?usp=sharing", col_names = c('a','b'))
+course_info <- read_sheet("1ijXkRRscKCg-s2V425YP4hEw57b8qQTCU_a7pgMnOWQ", col_names = c('a','b'))
+
 
 ```
 
