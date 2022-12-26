@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Estimación bayesiana"
+  title: "estimación bayesiana 2023"
   navbar:
     pinned: true
     background: "#F0DC14"
