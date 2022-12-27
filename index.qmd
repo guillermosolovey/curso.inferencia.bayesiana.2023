@@ -39,6 +39,6 @@ course_info %>%
 
 ------------------------------------------------------------------------
 
-###### `r fa("university", fill = "steelblue")` [{{< var school.name >}}]({{< var school.url >}})
+###### `r fa("university", fill = "steelblue")` [{{< var school.name >}}](%7B%7B%3C%20var%20school.url%20%3E%7D%7D)
 
-###### `r fa("university", fill = "steelblue")` [{{< var university.name >}}]({{< var university.url >}})
+###### `r fa("university", fill = "steelblue")` [{{< var university.name >}}](%7B%7B%3C%20var%20university.url%20%3E%7D%7D)

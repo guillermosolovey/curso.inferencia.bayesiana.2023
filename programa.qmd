@@ -1,5 +1,5 @@
 ---
-title: "{{< fa code >}} Programa"
+title: "Programa"
 ---
 
 ## Objetivos
@@ -13,50 +13,27 @@ title: "{{< fa code >}} Programa"
 
 ### Unidad 1
 
-**Fundamentos bayesianos**: Aprender cómo pensar *bayesianamente* y cómo crear modelos bayesianos 
-básicos.
+**Fundamentos bayesianos**: Aprender cómo pensar *bayesianamente* y cómo crear modelos bayesianos básicos.
 
-Introducción a la estadística bayesiana.
-Diferencias entre estadística bayesiana y frecuentista.
-Pensar bayesianamente.
-Modelo beta-binomial.
-Equilibrio entre el prior y los datos.
-Análisis bayesiano secuencial.
-Familias conjugadas.
+Introducción a la estadística bayesiana. Diferencias entre estadística bayesiana y frecuentista. Pensar bayesianamente. Modelo beta-binomial. Equilibrio entre el prior y los datos. Análisis bayesiano secuencial. Familias conjugadas.
 
 ### Unidad 2
 
-**Simulación y análisis de la distribución posterior**: Herramientas computacionales para simular la 
-distribución posterior en modelos bayesianos complejos.
+**Simulación y análisis de la distribución posterior**: Herramientas computacionales para simular la distribución posterior en modelos bayesianos complejos.
 
-Analizar modelos simulados y exactos para hacer inferencia y sacar conclusiones. 
-Aproximar la distribución posterior. 
-Método de grilla, Metrópolis-Hastings y Markov Chain Monte Carlo (MCMC). 
-Implementación y diagnóstico en R. 
-Estimación de parámetros Testeo de hipótesis. Predicción.
+Analizar modelos simulados y exactos para hacer inferencia y sacar conclusiones. Aproximar la distribución posterior. Método de grilla, Metrópolis-Hastings y Markov Chain Monte Carlo (MCMC). Implementación y diagnóstico en R. Estimación de parámetros Testeo de hipótesis. Predicción.
 
 ### Unidad 3
 
-**Modelos bayesianos de regresión y clasificación**: Extender los modelos bayesianos a casos en los 
-que la variable respuesta es contínua (regresión) y categórica (clasificación). 
+**Modelos bayesianos de regresión y clasificación**: Extender los modelos bayesianos a casos en los que la variable respuesta es contínua (regresión) y categórica (clasificación).
 
-Regresión Normal. 
-Regresión múltiple. 
-Variables de control y confusoras. 
-Evaluación, diagnóstico y comparación de modelos de regresión. 
-Regresión de Poisson. Naive-Bayes. 
-Regresión logística.
+Regresión Normal. Regresión múltiple. Variables de control y confusoras. Evaluación, diagnóstico y comparación de modelos de regresión. Regresión de Poisson. Naive-Bayes. Regresión logística.
 
 ### Unidad 4
 
-**Modelos bayesianos jerárquicos**: Modelos bayesianos para datos multi-nivel, como datos 
-longitudinales y de medidas repetidas. 
+**Modelos bayesianos jerárquicos**: Modelos bayesianos para datos multi-nivel, como datos longitudinales y de medidas repetidas.
 
-Modelo complete-pool y no-pool. 
-Modelos de pooling parcial. 
-Modelo jerárquico normal sin predictores. 
-Modelos de regresión y clasificación jerárquicos.
-
+Modelo complete-pool y no-pool. Modelos de pooling parcial. Modelo jerárquico normal sin predictores. Modelos de regresión y clasificación jerárquicos.
 
 ## Bibliografía
 
@@ -65,7 +42,7 @@ Principalmente vamos a usar dos libros:
 -   Richard McElreath, [**Statistical Rethinking:** A Bayesian Course with Examples in R and Stan, 2nd edition](https://xcelab.net/rm/statistical-rethinking/).
 -   Alicia A. Johnson, Miles Q. Ott, and Mine Dogucu, [**Bayes Rules!** An Introduction to Applied Bayesian Modeling](https://www.bayesrulesbook.com/)
 
-*Bayes Rules!* está [disponible online de forma gratuita](https://www.bayesrulesbook.com/). El libro *Statistical Rethinking* no es gratuito, pero hay una copia encargada a la [biblioteca central de la facultad](http://www.bl.fcen.uba.ar/) y el autor puso a disposición [videos de sus clases](https://www.youtube.com/playlist?list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN), [slides](https://github.com/rmcelreath/stat_rethinking_2022) y [ejercicios con sus soluciones](https://github.com/rmcelreath/stat_rethinking_2022/tree/main/homework).
+<!-- *Bayes Rules!* está [disponible online de forma gratuita](https://www.bayesrulesbook.com/). El libro *Statistical Rethinking* no es gratuito, pero hay una copia encargada a la [biblioteca central de la facultad](http://www.bl.fcen.uba.ar/) y el autor puso a disposición [videos de sus clases](https://www.youtube.com/playlist?list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN), [slides](https://github.com/rmcelreath/stat_rethinking_2022) y [ejercicios con sus soluciones](https://github.com/rmcelreath/stat_rethinking_2022/tree/main/homework). -->
 
 Otros libros de referencia complementarios son:
 
@@ -73,4 +50,3 @@ Otros libros de referencia complementarios son:
 -   Cameron Davidson-Pilon, [Bayesian methods for hackers: probabilistic programming and Bayesian inference](https://www.oreilly.com/library/view/bayesian-methods-for/9780133902914/)
 -   David Robinson, [Introduction to empirical bayes: examples from baseball statistics](https://drob.gumroad.com/l/empirical-bayes).
 -   Andrew Gelman, Jennifer Hill, and Aki Vehtari. [Regression and other stories](https://avehtari.github.io/ROS-Examples/).
-

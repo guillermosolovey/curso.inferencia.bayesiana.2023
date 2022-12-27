@@ -32,7 +32,7 @@
     "href": "programa.html#bibliografía",
     "title": " Programa",
     "section": "Bibliografía",
-    "text": "Bibliografía\nPrincipalmente vamos a usar dos libros:\n\nRichard McElreath, Statistical Rethinking: A Bayesian Course with Examples in R and Stan, 2nd edition.\nAlicia A. Johnson, Miles Q. Ott, and Mine Dogucu, Bayes Rules! An Introduction to Applied Bayesian Modeling\n\nBayes Rules! está disponible online de forma gratuita. El libro Statistical Rethinking no es gratuito, pero hay una copia encargada a la biblioteca central de la facultad y el autor puso a disposición videos de sus clases, slides y ejercicios con sus soluciones.\nOtros libros de referencia complementarios son:\n\nPeter D. Hoff, A first course in Bayesian statistical methods.\nCameron Davidson-Pilon, Bayesian methods for hackers: probabilistic programming and Bayesian inference\nDavid Robinson, Introduction to empirical bayes: examples from baseball statistics.\nAndrew Gelman, Jennifer Hill, and Aki Vehtari. Regression and other stories."
+    "text": "Bibliografía\nPrincipalmente vamos a usar dos libros:\n\nRichard McElreath, Statistical Rethinking: A Bayesian Course with Examples in R and Stan, 2nd edition.\nAlicia A. Johnson, Miles Q. Ott, and Mine Dogucu, Bayes Rules! An Introduction to Applied Bayesian Modeling\n\n\nOtros libros de referencia complementarios son:\n\nPeter D. Hoff, A first course in Bayesian statistical methods.\nCameron Davidson-Pilon, Bayesian methods for hackers: probabilistic programming and Bayesian inference\nDavid Robinson, Introduction to empirical bayes: examples from baseball statistics.\nAndrew Gelman, Jennifer Hill, and Aki Vehtari. Regression and other stories."
   },
   {
     "objectID": "programa.html#programa",
