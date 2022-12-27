@@ -9,7 +9,7 @@
   {
     "objectID": "cronograma.html",
     "href": "cronograma.html",
-    "title": " Cronograma",
+    "title": "Cronograma",
     "section": "",
     "text": "Nota: El cronograma se va a actualizar en Marzo 2023.\n\n\n\n\n\n\n\n\n\n  \n  \n    \n      semana\n      fecha\n      tema\n      lectura\n      slides\n      notas\n      tp\n    \n  \n  \n    1\n\nIntroducción a inferencia bayesiana\n\n\n\n\n    1\n\n\n\n\n\n\n    2\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    2\n\n\n\n\n\n\n    3\n\n\n\n\n\n\n    3\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    \n\n\n\n\n\n\n    4\n\n\n\n\n\n\n    4\n\n\n\n\n\n\n    5\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    \n\n\n\n\n\n\n    5\n\n\n\n\n\n\n    6\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    6\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    7\n\n\n\n\n\n\n    7\n\n\n\n\n\n\n    8\n\n\n\n\n\n\n    8\n\n\n\n\n\n\n    9\n\n\n\n\n\n\n    9\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    10\n\n\n\n\n\n\n    10\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    \n\n\n\n\n\n\n    11\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    11\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    12\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    12\n\n\n\n\n\n\n    13\n\n\n\n\n\n\n    13\n\n\n\n\n\n\n    14\n\n\n\n\n\n\n    14\n\n\n\n\n\n\n    15\n\n\n\n\n\n\n    15\n\n\n\n\n\n\n    16\n\n\n\n\n\n\n    16"
   },
@@ -23,21 +23,21 @@
   {
     "objectID": "programa.html",
     "href": "programa.html",
-    "title": " Programa",
+    "title": "Programa",
     "section": "",
     "text": "Distinguir entre el enfoque estadístico frecuentista y bayesiano.\nConstruir modelos bayesianos para situaciones simples.\nUsar fluidamente R y Stan para implementar modelos estadísticos bayesianos.\nHacer predicciones e interpretar los resultados de un modelo bayesiano."
   },
   {
     "objectID": "programa.html#bibliografía",
     "href": "programa.html#bibliografía",
-    "title": " Programa",
+    "title": "Programa",
     "section": "Bibliografía",
     "text": "Bibliografía\nPrincipalmente vamos a usar dos libros:\n\nRichard McElreath, Statistical Rethinking: A Bayesian Course with Examples in R and Stan, 2nd edition.\nAlicia A. Johnson, Miles Q. Ott, and Mine Dogucu, Bayes Rules! An Introduction to Applied Bayesian Modeling\n\n\nOtros libros de referencia complementarios son:\n\nPeter D. Hoff, A first course in Bayesian statistical methods.\nCameron Davidson-Pilon, Bayesian methods for hackers: probabilistic programming and Bayesian inference\nDavid Robinson, Introduction to empirical bayes: examples from baseball statistics.\nAndrew Gelman, Jennifer Hill, and Aki Vehtari. Regression and other stories."
   },
   {
     "objectID": "programa.html#programa",
     "href": "programa.html#programa",
-    "title": " Programa",
+    "title": "Programa",
     "section": "Programa",
     "text": "Programa\n\nUnidad 1\nFundamentos bayesianos: Aprender cómo pensar bayesianamente y cómo crear modelos bayesianos básicos.\nIntroducción a la estadística bayesiana. Diferencias entre estadística bayesiana y frecuentista. Pensar bayesianamente. Modelo beta-binomial. Equilibrio entre el prior y los datos. Análisis bayesiano secuencial. Familias conjugadas.\n\n\nUnidad 2\nSimulación y análisis de la distribución posterior: Herramientas computacionales para simular la distribución posterior en modelos bayesianos complejos.\nAnalizar modelos simulados y exactos para hacer inferencia y sacar conclusiones. Aproximar la distribución posterior. Método de grilla, Metrópolis-Hastings y Markov Chain Monte Carlo (MCMC). Implementación y diagnóstico en R. Estimación de parámetros Testeo de hipótesis. Predicción.\n\n\nUnidad 3\nModelos bayesianos de regresión y clasificación: Extender los modelos bayesianos a casos en los que la variable respuesta es contínua (regresión) y categórica (clasificación).\nRegresión Normal. Regresión múltiple. Variables de control y confusoras. Evaluación, diagnóstico y comparación de modelos de regresión. Regresión de Poisson. Naive-Bayes. Regresión logística.\n\n\nUnidad 4\nModelos bayesianos jerárquicos: Modelos bayesianos para datos multi-nivel, como datos longitudinales y de medidas repetidas.\nModelo complete-pool y no-pool. Modelos de pooling parcial. Modelo jerárquico normal sin predictores. Modelos de regresión y clasificación jerárquicos."
   },
