@@ -14,8 +14,7 @@ instructor:
 course:
   title: "Estimación Bayesiana"
   subtitle: "Introducción a la estadística bayesiana con un enfoque computacional"
-  aviso: "Materia electiva de la [Licenciatura en Ciencia de Datos](https://lcd.exactas.uba.ar/) y 
-          optativa de doctorado."
+  aviso: "Materia electiva de la [Licenciatura en Ciencia de Datos](https://lcd.exactas.uba.ar/)."
   inscripcion: "desde el 22 de Febrero al 5 de Marzo de 2023."
   siugrado: "a definir"
   siudoctorado: "a definir"
