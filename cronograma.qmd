@@ -1,8 +1,9 @@
 ---
 title: "Cronograma"
+toc: false
 ---
 
-**Nota**: El cronograma se va a actualizar en Marzo 2023.
+**Nota**: Este cronograma es muy preliminar. Se va a actualizar en Marzo.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 library(googlesheets4)
@@ -16,14 +17,15 @@ d <- read_sheet("1Ch8eQuNgvHsuh9a2To4cjyCdyKgXAcP0pXRWEN6xfls")
 d %>% 
   mutate(
     fecha = as.Date(fecha),
+    lectura = ifelse(is.na(lectura), "", lectura),
     semana = ifelse(is.na(semana), "", semana),
     tema = ifelse(is.na(tema), "", tema)) %>%
   gt() %>%
-    text_transform(cells_body(columns = c(lectura)),
-                 fn = function(x){
-                   ifelse(is.na(x), fontawesome::fa('book', fill_opacity = 0.1), 
-                          glue::glue("<a href = {x}>{fontawesome::fa('book')}</a>"))
-                 }) %>%
+    # text_transform(cells_body(columns = c(lectura)),
+    #              fn = function(x){
+    #                ifelse(is.na(x), fontawesome::fa('book', fill_opacity = 0.1), 
+    #                       glue::glue("<a href = {x}>{fontawesome::fa('book')}</a>"))
+    #              }) %>%
   text_transform(cells_body(columns = c(slides)),
                  fn = function(x){
                    ifelse(is.na(x), fontawesome::fa('laptop', fill_opacity = 0.1), 

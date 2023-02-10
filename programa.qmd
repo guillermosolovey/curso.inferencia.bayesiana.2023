@@ -1,5 +1,6 @@
 ---
 title: "Programa"
+toc: false
 ---
 
 ## Objetivos
@@ -37,16 +38,18 @@ Modelo complete-pool y no-pool. Modelos de pooling parcial. Modelo jerárquico n
 
 ## Bibliografía
 
-Principalmente vamos a usar dos libros:
+principal:
 
--   Richard McElreath, [**Statistical Rethinking:** A Bayesian Course with Examples in R and Stan, 2nd edition](https://xcelab.net/rm/statistical-rethinking/).
 -   Alicia A. Johnson, Miles Q. Ott, and Mine Dogucu, [**Bayes Rules!** An Introduction to Applied Bayesian Modeling](https://www.bayesrulesbook.com/)
+-   Richard McElreath, [**Statistical Rethinking:** A Bayesian Course with Examples in R and Stan, 2nd edition](https://xcelab.net/rm/statistical-rethinking/).
 
 <!-- *Bayes Rules!* está [disponible online de forma gratuita](https://www.bayesrulesbook.com/). El libro *Statistical Rethinking* no es gratuito, pero hay una copia encargada a la [biblioteca central de la facultad](http://www.bl.fcen.uba.ar/) y el autor puso a disposición [videos de sus clases](https://www.youtube.com/playlist?list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN), [slides](https://github.com/rmcelreath/stat_rethinking_2022) y [ejercicios con sus soluciones](https://github.com/rmcelreath/stat_rethinking_2022/tree/main/homework). -->
 
-Otros libros de referencia complementarios son:
+complementaria:
 
+-   Ben Lambert, [A Student’s Guide to Bayesian Statistics](https://ben-lambert.com/a-students-guide-to-bayesian-statistics/).
+-  Osvaldo A. Martin, Ravin Kumar y Junpeng Lao, [Bayesian Modeling and Computation in Python](https://bayesiancomputationbook.com/welcome.html).
 -   Peter D. Hoff, [A first course in Bayesian statistical methods](https://link.springer.com/book/10.1007/978-0-387-92407-6).
--   Cameron Davidson-Pilon, [Bayesian methods for hackers: probabilistic programming and Bayesian inference](https://www.oreilly.com/library/view/bayesian-methods-for/9780133902914/)
+-   Cameron Davidson-Pilon, [Bayesian methods for hackers: probabilistic programming and Bayesian inference](https://www.oreilly.com/library/view/bayesian-methods-for/9780133902914/).
 -   David Robinson, [Introduction to empirical bayes: examples from baseball statistics](https://drob.gumroad.com/l/empirical-bayes).
--   Andrew Gelman, Jennifer Hill, and Aki Vehtari. [Regression and other stories](https://avehtari.github.io/ROS-Examples/).
+-   Andrew Gelman, Jennifer Hill, and Aki Vehtari, [Regression and other stories](https://avehtari.github.io/ROS-Examples/).

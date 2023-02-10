@@ -8,9 +8,9 @@ sidebar: false
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
 library(fontawesome)
-library(gtExtras)
 library(googlesheets4)
 library(gt)
+library(gtExtras)
 library(tidyverse)
 gs4_deauth()
 
