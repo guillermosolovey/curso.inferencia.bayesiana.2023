@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>eb2023 - Programa</title>
+<title>eb2023 - Guías de problemas</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,6 +60,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -89,12 +90,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><i class="fa-solid fa-calendar" aria-label="calendar"></i> Cronograma</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./programa.html" aria-current="page">
+    <a class="nav-link" href="./programa.html">
  <span class="menu-text"><i class="fa-solid fa-code" aria-label="code"></i> Programa</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./ejercicios.html">
- <span class="menu-text"><i class="fa-solid fa-code" aria-label="code"></i> Ejercicios</span></a>
+    <a class="nav-link active" href="./ejercicios.html" aria-current="page">
+ <span class="menu-text"><i class="fa-solid fa-dumbbell" aria-label="dumbbell"></i> Ejercicios</span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -112,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Programa</h1>
+<h1 class="title">Guías de problemas</h1>
 </div>
 
 
@@ -127,55 +128,33 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="objetivos" class="level2">
-<h2 class="anchored" data-anchor-id="objetivos">Objetivos</h2>
-<ul>
-<li>Distinguir entre el enfoque estadístico frecuentista y bayesiano.</li>
-<li>Construir modelos bayesianos para situaciones simples.</li>
-<li>Usar fluidamente R y Stan para implementar modelos estadísticos bayesianos.</li>
-<li>Hacer predicciones e interpretar los resultados de un modelo bayesiano.</li>
-</ul>
-</section>
-<section id="programa" class="level2">
-<h2 class="anchored" data-anchor-id="programa">Programa</h2>
-<section id="unidad-1" class="level3">
-<h3 class="anchored" data-anchor-id="unidad-1">Unidad 1</h3>
-<p><strong>Fundamentos bayesianos</strong>: Aprender cómo pensar <em>bayesianamente</em> y cómo crear modelos bayesianos básicos.</p>
-<p>Introducción a la estadística bayesiana. Diferencias entre estadística bayesiana y frecuentista. Pensar bayesianamente. Modelo beta-binomial. Equilibrio entre el prior y los datos. Análisis bayesiano secuencial. Familias conjugadas.</p>
-</section>
-<section id="unidad-2" class="level3">
-<h3 class="anchored" data-anchor-id="unidad-2">Unidad 2</h3>
-<p><strong>Simulación y análisis de la distribución posterior</strong>: Herramientas computacionales para simular la distribución posterior en modelos bayesianos complejos.</p>
-<p>Analizar modelos simulados y exactos para hacer inferencia y sacar conclusiones. Aproximar la distribución posterior. Método de grilla, Metrópolis-Hastings y Markov Chain Monte Carlo (MCMC). Implementación y diagnóstico en R. Estimación de parámetros Testeo de hipótesis. Predicción.</p>
-</section>
-<section id="unidad-3" class="level3">
-<h3 class="anchored" data-anchor-id="unidad-3">Unidad 3</h3>
-<p><strong>Modelos bayesianos de regresión y clasificación</strong>: Extender los modelos bayesianos a casos en los que la variable respuesta es contínua (regresión) y categórica (clasificación).</p>
-<p>Regresión Normal. Regresión múltiple. Variables de control y confusoras. Evaluación, diagnóstico y comparación de modelos de regresión. Regresión de Poisson. Naive-Bayes. Regresión logística.</p>
-</section>
-<section id="unidad-4" class="level3">
-<h3 class="anchored" data-anchor-id="unidad-4">Unidad 4</h3>
-<p><strong>Modelos bayesianos jerárquicos</strong>: Modelos bayesianos para datos multi-nivel, como datos longitudinales y de medidas repetidas.</p>
-<p>Modelo complete-pool y no-pool. Modelos de pooling parcial. Modelo jerárquico normal sin predictores. Modelos de regresión y clasificación jerárquicos.</p>
-</section>
-</section>
-<section id="bibliografía" class="level2">
-<h2 class="anchored" data-anchor-id="bibliografía">Bibliografía</h2>
-<p>principal:</p>
-<ul>
-<li>Alicia A. Johnson, Miles Q. Ott, and Mine Dogucu, <a href="https://www.bayesrulesbook.com/"><strong>Bayes Rules!</strong> An Introduction to Applied Bayesian Modeling</a></li>
-<li>Richard McElreath, <a href="https://xcelab.net/rm/statistical-rethinking/"><strong>Statistical Rethinking:</strong> A Bayesian Course with Examples in R and Stan, 2nd edition</a>.</li>
-</ul>
-<!-- *Bayes Rules!* está [disponible online de forma gratuita](https://www.bayesrulesbook.com/). El libro *Statistical Rethinking* no es gratuito, pero hay una copia encargada a la [biblioteca central de la facultad](http://www.bl.fcen.uba.ar/) y el autor puso a disposición [videos de sus clases](https://www.youtube.com/playlist?list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN), [slides](https://github.com/rmcelreath/stat_rethinking_2022) y [ejercicios con sus soluciones](https://github.com/rmcelreath/stat_rethinking_2022/tree/main/homework). -->
-<p>complementaria:</p>
-<ul>
-<li>Ben Lambert, <a href="https://ben-lambert.com/a-students-guide-to-bayesian-statistics/">A Student’s Guide to Bayesian Statistics</a>.</li>
-<li>Osvaldo A. Martin, Ravin Kumar y Junpeng Lao, <a href="https://bayesiancomputationbook.com/welcome.html">Bayesian Modeling and Computation in Python</a>.</li>
-<li>Peter D. Hoff, <a href="https://link.springer.com/book/10.1007/978-0-387-92407-6">A first course in Bayesian statistical methods</a>.</li>
-<li>Cameron Davidson-Pilon, <a href="https://www.oreilly.com/library/view/bayesian-methods-for/9780133902914/">Bayesian methods for hackers: probabilistic programming and Bayesian inference</a>.</li>
-<li>David Robinson, <a href="https://drob.gumroad.com/l/empirical-bayes">Introduction to empirical bayes: examples from baseball statistics</a>.</li>
-<li>Andrew Gelman, Jennifer Hill, and Aki Vehtari, <a href="https://avehtari.github.io/ROS-Examples/">Regression and other stories</a>.</li>
-</ul>
+<section id="guía-1-teorema-de-bayes-y-modelo-beta-binomial" class="level2">
+<h2 class="anchored" data-anchor-id="guía-1-teorema-de-bayes-y-modelo-beta-binomial">Guía 1: Teorema de Bayes y modelo Beta-Binomial</h2>
+<p>Recomiendo hacer, además de estos, los ejercicios de los capítulos 1 a 3 del libro <a href="https://www.bayesrulesbook.com/">Bayes Rules!</a>.</p>
+<ol type="1">
+<li><p>Supongamos que queremos averiguar cuál es la superficie de la Tierra cubierta por agua, <span class="math inline">\(\theta\)</span>. Para eso, lanzamos al aire un globo terráqueo y al atraparlo, registramos si nuestro dedo índice de la mano derecha quedó marcando agua o tierra. De esta manera obtenemos una secuencia de muestras aleatorias de una variable <span class="math inline">\(\text{Bernoulli}(\theta)\)</span> independientes.</p>
+<ol type="a">
+<li>Con ese procedimiento se obtienen 4 “agua” (<strong>A</strong>) y 11 “tierra” (<strong>T</strong>). Usando un prior uniforme para <span class="math inline">\(\theta\)</span>, obtener la distribución posterior para <span class="math inline">\(\theta\)</span>.</li>
+<li>Usando la distribución posterior calculada, obtener la distribución “posterior predictive” para las siguiente 5 muestras aleatorias</li>
+<li>Usar la distribución “posterior predictive” para calcular la probabilidad de obtener 3 o más <strong>A</strong> en las siguiente 5 realizaciones.</li>
+</ol></li>
+<li><p>Siguiente el procedimiento del ejercicio anterior y partiendo de una distribución uniforme, graficar la distribución posterior luego de observar <strong>A</strong>. Luego, usando esa distribución posterior como prior, calcular y graficar la distribición posterior luego de observar <strong>T</strong>. Continuar este proceso para ver cómo se actualiza secuencialmente la distribución posterior cuando sucesivamente obtenemos (después de las dos primeras muestras aleatorias) <strong>{A, A, A, T, A, T, A}</strong>.</p></li>
+<li><p>Repetir el ejercicio 2 pero partir de un prior triangular, con máximo en <span class="math inline">\(\theta = 0.5\)</span>. Para hacerlo, hacer una aproximación de grilla para calcular la posterior. Esto es:</p>
+<ol type="a">
+<li>Definir un vector de valores de <span class="math inline">\(\theta\)</span> en los cuales se quiere estimar la posterior.</li>
+<li>Calcular el prior para cada valor <span class="math inline">\(\theta\)</span> en esa grilla.</li>
+<li>Calcular la función de likelihood para valor del parámetro.</li>
+<li>Calcular la posterior no normalizada multiplicando el prior por el likelihood.</li>
+<li>Normalizar la posterior dividiendo por la suma de todos sus valores.</li>
+</ol></li>
+<li><p>Crear una función que genere <span class="math inline">\(N\)</span> datos del proceso aleatorio descripto en el ejercicio 1 tomando como parámetros <span class="math inline">\(N\)</span> y <span class="math inline">\(\theta\)</span>. Crear otra función que calcule la distribución posterior partiendo de un prior uniforme, genere muestras de esta distribución y con esas muestras devuelva un intervalo de credibilidad del 50% <span class="math inline">\(\theta\)</span>. Con esta función, estimar el número mínimo de muestras aleatorias que se necesitan para estimar <span class="math inline">\(\theta\)</span> con un intervalo de credibilidad de ancho menor a 0.1.</p></li>
+<li><p>Supongamos que estamos de espaldas a una mesa de pool separada en dos por una línea vertical. Juan y Alicia participan del siguiente juego. Tiran una pelota a la mesa que cae en un punto cualquiera, al azar. Si cae a la izquierda de la línea, Alicia gana 1 punto. Si cae a la derecha, Juan gana 1 punto. Gana el primero que llega a 6 puntos. Después de tirar 8 bolas, Alicia suma 5 puntos y Juan 3.</p>
+<ol type="a">
+<li>Calcular la distribución posterior para la probabilidad <span class="math inline">\(\theta\)</span> de que Juan gane el juego.</li>
+<li>Tomar muestras de la posterior y con ellas obtener la esperanza de <span class="math inline">\(\theta\)</span>. Comparar con el resultado visto en clase.</li>
+<li>Simular este juego para obtener la probabilidad esperada de que gana Juan el juego, entendida como la cantidad de veces que gana Juan el juego condicional a que va perdiendo 5 a 3.</li>
+</ol></li>
+</ol>
 
 
 </section>

@@ -16,6 +16,8 @@ website:
         text: "{{< fa calendar >}} Cronograma"
       - href: programa.qmd
         text: "{{< fa code >}} Programa"
+      - href: ejercicios.qmd
+        text: "{{< fa dumbbell >}} Ejercicios"
         
 
 format:

@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sta-112-f22.github.io/website/index.html</loc>
-    <lastmod>2023-03-21T12:50:42.518Z</lastmod>
+    <lastmod>2023-03-28T12:26:59.282Z</lastmod>
   </url>
   <url>
     <loc>https://sta-112-f22.github.io/website/cronograma.html</loc>
-    <lastmod>2023-03-21T12:50:49.348Z</lastmod>
+    <lastmod>2023-03-28T12:18:31.079Z</lastmod>
   </url>
   <url>
     <loc>https://sta-112-f22.github.io/website/programa.html</loc>
-    <lastmod>2023-03-17T13:15:33.734Z</lastmod>
+    <lastmod>2023-03-28T12:21:28.536Z</lastmod>
   </url>
   <url>
     <loc>https://sta-112-f22.github.io/website/eb2023.html</loc>
@@ -19,5 +19,9 @@
   <url>
     <loc>https://sta-112-f22.github.io/website/intervalos.html</loc>
     <lastmod>2023-03-21T12:50:39.148Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta-112-f22.github.io/website/ejercicios.html</loc>
+    <lastmod>2023-03-28T12:26:27.002Z</lastmod>
   </url>
 </urlset>
