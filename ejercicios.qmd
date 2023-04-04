@@ -28,6 +28,45 @@ Recomiendo hacer, además de estos, los ejercicios de los capítulos 1 a 3 del l
 
 5.  Supongamos que estamos de espaldas a una mesa de pool separada en dos por una línea vertical. Juan y Alicia participan del siguiente juego. Tiran una pelota a la mesa que cae en un punto cualquiera, al azar. Si cae a la izquierda de la línea, Alicia gana 1 punto. Si cae a la derecha, Juan gana 1 punto. Gana el primero que llega a 6 puntos. Después de tirar 8 bolas, Alicia suma 5 puntos y Juan 3.
 
-    a.  Calcular la distribución posterior para la probabilidad  $\theta$ de que Juan gane el juego. 
-    a.  Tomar muestras de la posterior y con ellas obtener la esperanza de $\theta$. Comparar con el resultado visto en clase.
-    a.  Simular este juego para obtener la probabilidad esperada de que gana Juan el juego, entendida como la cantidad de veces que gana Juan el juego condicional a que va perdiendo 5 a 3.
+    a.  Calcular la distribución posterior para la probabilidad $\theta$ de que Juan gane el juego.
+    b.  Tomar muestras de la posterior y con ellas obtener la esperanza de $\theta$. Comparar con el resultado visto en clase.
+    c.  Simular este juego para obtener la probabilidad esperada de que gana Juan el juego, entendida como la cantidad de veces que gana Juan el juego condicional a que va perdiendo 5 a 3.
+
+## Guía 2: Familias conjugadas
+
+1.  Se observa la realización de $n$ variables aleatorias Poisson independientes de parámetro $\lambda$. Escribir y graficar la función de Likelihood $L(\lambda)$ para cada caso:
+
+    a.  $(y_1,y_2,y_3) = (3, 7 ,19)$.
+    b.  $(y_1,y_2,y_3,y_4) = (12, 12 ,12, 0)$.
+    c.  $y_1 = 12$.
+    d.  $(y_1,y_2,y_3,y_4,y_5) = (16, 10 ,17, 11, 11)$.
+
+2.  Suponiendo un prior $\lambda \sim \text{Gamma}(24,2)$, especificar y graficar la distribución posterior para $\lambda$ correspondiente a cada escenario del ejercicio anterior.
+
+3.  Repetir el ejercicio anterior suponiendo un prior $\lambda \sim \text{Gamma}(2,2)$
+
+4.  Supongamos que uno tiene una variable aleatoria $Y$ que puede modelar con una distribución geométrica. Es decir que $P(Y=y \mid \theta) = \theta ~ (1-\theta)^{y-1}$ para $y \in \{1, 2, 3, ...\}$. Se utiliza un prior $Beta(a,b)$ para $\theta$.
+
+    a.  ¿Qué situación se representa con una variable aleatoria geométrica?
+    b.  Derivar la distribución posterior para $\theta$ suponiendo que se observó $Y=y$. Identificar la distribución encontrada y sus parámetros.
+    c.  El modelo Beta es un prior conjugado de la Geométrica?
+
+5.  Supongamos que $\lambda$ es el promedio del número total de goles por partido del mundial de fútbol femenino. En este ejercicio vamos a analizar $\lambda$ usando el modelo Gamma-Poisson donde $Y_i$ es el número de goles que se hicieron en un partido $i$ del Mundial. Es decir que $P(Y_i \mid \lambda) = \text{Pois}(\lambda)$. Como prior, tomar: $P(\lambda) = \text{Gamma}(1, 0.25)$.
+
+    a.  Graficar el conocimiento previo sobre $\lambda$.
+    b.  ¿Por qué el modelo Poisson es razonable para Y_i?
+    c.  Escribir la distribución posterior para $\lambda$ suponiendo que en los primeros tres partidos se meten $(y_1,y_2,y_3) = (3, 7 ,4)$ goles.
+    d. Ahora usando datos reales, graficar la evolución (partido a partido) del conocimiento sobre $\lambda$. Los datos se pueden obtener 
+
+```{r eval=FALSE}
+library(fivethirtyeight)
+library(dplyr)
+
+data("wwc_2019_matches")
+d <- wwc_2019_matches %>% 
+  mutate(total = score1 + score2) %>% 
+  select(total)
+
+```
+
+
