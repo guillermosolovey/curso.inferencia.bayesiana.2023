@@ -82,7 +82,7 @@ d <- wwc_2019_matches %>%
     b.  Simulando datos. Para esto: 
         i.    Generar 10000 valores simulados del parámetro $\theta$ usando la distribución posterior.
         ii.   Para cada valor del parámetro $\theta_i$, simular un $y_i$ predicho.
-        iii.  Resumir los valores de $\theta_i$ correspondientes al valor $y_i=1$.
+        iii.  ¿Cuál es la frecuencia de $y=1$ entre los predichos? ¿Coincide con lo calculado en a?.
         
 4. Supongamos que quieren saber si los mails que reciben los lunes los responden más rápido que los que reciben los sábados. Con datos que recolectan de su propia experiencia llegan a que la distribución posterior para $\theta_L$ es Beta(3,7) (correspondiente a mails que llegan los lunes) y $\theta_S$ es Beta(4,8) para los que llegan los sábados. Para responder la pregunta simulando, sigan estos pasos:
 
