@@ -117,4 +117,37 @@ d <- wwc_2019_matches %>%
     d.  Graficar la cadena resultante (secuencia de muestras). ¿Están satisfechos con el resultado? ¿A qué hay que estar atentos para aceptar las muestras?
     
     
-    
+
+## Guía 4: Modelo lineal - Introducción a brms
+
+1.   Para el siguiente modelo, simular observaciones $y_{obs}$ con el prior
+
+$$
+y \sim \text{Normal}(\mu, \sigma) \\
+\mu = \text{Normal}(0,10) \\
+\sigma = \text{Exponencial}(1)
+$$
+
+2.   Escribir el modelo del ejercicio 1 en `brms`.
+ 
+3.   Traducir el siguiente modelo (en sintaxis de `brms`) matemáticamente>
+```{r eval=FALSE}
+
+      family = gaussian, 
+      y ~ 1 + x,
+      prior = c(prior(normal(0, 10), class = Intercept),
+                prior(normal(0, 10), class = b),
+                prior(exp(1),  class = sigma))
+
+```
+
+4.   Supongamos que se mide la altura de un grupo de chicos durante tres años. Al cabo de los tres años, se quiere usar un modelo lineal para predecir la altura usando el año como predictora. Escribir la definición matemática para este modelo de regresión, usando los priors que quiera (pero esté preparado para defender la elección de priors.)
+
+5.   Usando el dataset de alturas `Howell1` que viene con el paquete `rethinking`, dar una predicción para la altura de individuos que pesan 46.95, 43.72, 64.78, 32.59 y 54.63 Kg. Dar también un intervalo de credibilidad del 95% para estas predicciones.
+
+6.   Del mismo dataset, seleccionar sólo los individuos que tienen menos de 18 años. Ajustar con `brms` un modelo de regresión lineal para la altura teniendo como explicativa al peso de los individuos. Graficar los datos y la recta obtenida con los valores medios de la posterior y un intervalo de credibilidad para esos valores. También graficar un intervalo de credibilidad para la altura predicha por el modelo. Todo en el mismo gráfico. ¿Te parece adecuado el modelo? ¿Qué aspectos podrías cambiar para mejorar el modelo?
+
+ 
+
+
+

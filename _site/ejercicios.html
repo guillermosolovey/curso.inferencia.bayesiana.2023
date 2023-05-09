@@ -300,6 +300,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Graficar la cadena resultante (secuencia de muestras). ¿Están satisfechos con el resultado? ¿A qué hay que estar atentos para aceptar las muestras?</li>
 </ol></li>
 </ol>
+</section>
+<section id="guía-4-modelo-lineal---introducción-a-brms" class="level2">
+<h2 class="anchored" data-anchor-id="guía-4-modelo-lineal---introducción-a-brms">Guía 4: Modelo lineal - Introducción a brms</h2>
+<ol type="1">
+<li>Para el siguiente modelo, simular observaciones <span class="math inline">\(y_{obs}\)</span> con el prior</li>
+</ol>
+<p><span class="math display">\[
+y \sim \text{Normal}(\mu, \sigma) \\
+\mu = \text{Normal}(0,10) \\
+\sigma = \text{Exponencial}(1)
+\]</span></p>
+<ol start="2" type="1">
+<li><p>Escribir el modelo del ejercicio 1 en <code>brms</code>.</p></li>
+<li><p>Traducir el siguiente modelo (en sintaxis de <code>brms</code>) matemáticamente&gt;</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>      family <span class="ot">=</span> gaussian, </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>      y <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> x,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>      prior <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">10</span>), <span class="at">class =</span> Intercept),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                <span class="fu">prior</span>(<span class="fu">normal</span>(<span class="dv">0</span>, <span class="dv">10</span>), <span class="at">class =</span> b),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                <span class="fu">prior</span>(<span class="fu">exp</span>(<span class="dv">1</span>),  <span class="at">class =</span> sigma))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li><p>Supongamos que se mide la altura de un grupo de chicos durante tres años. Al cabo de los tres años, se quiere usar un modelo lineal para predecir la altura usando el año como predictora. Escribir la definición matemática para este modelo de regresión, usando los priors que quiera (pero esté preparado para defender la elección de priors.)</p></li>
+<li><p>Usando el dataset de alturas <code>Howell1</code> que viene con el paquete <code>rethinking</code>, dar una predicción para la altura de individuos que pesan 46.95, 43.72, 64.78, 32.59 y 54.63 Kg. Dar también un intervalo de credibilidad del 95% para estas predicciones.</p></li>
+<li><p>Del mismo dataset, seleccionar sólo los individuos que tienen menos de 18 años. Ajustar con <code>brms</code> un modelo de regresión lineal para la altura teniendo como explicativa al peso de los individuos. Graficar los datos y la recta obtenida con los valores medios de la posterior y un intervalo de credibilidad para esos valores. También graficar un intervalo de credibilidad para la altura predicha por el modelo. Todo en el mismo gráfico. ¿Te parece adecuado el modelo? ¿Qué aspectos podrías cambiar para mejorar el modelo?</p></li>
+</ol>
 
 
 </section>
