@@ -1,6 +1,6 @@
 ---
 title: "Guías de problemas"
-toc: false
+toc: true
 view: source
 ---
 
@@ -56,7 +56,7 @@ Recomiendo hacer, además de estos, los ejercicios de los capítulos 1 a 3 del l
     a.  Graficar el conocimiento previo sobre $\lambda$.
     b.  ¿Por qué el modelo Poisson es razonable para Y_i?
     c.  Escribir la distribución posterior para $\lambda$ suponiendo que en los primeros tres partidos se meten $(y_1,y_2,y_3) = (3, 7 ,4)$ goles.
-    d. Ahora usando datos reales, graficar la evolución (partido a partido) del conocimiento sobre $\lambda$. Los datos se pueden obtener 
+    d.  Ahora usando datos reales, graficar la evolución (partido a partido) del conocimiento sobre $\lambda$. Los datos se pueden obtener
 
 ```{r eval=FALSE}
 library(fivethirtyeight)
@@ -69,28 +69,27 @@ d <- wwc_2019_matches %>%
 
 ```
 
+## Guía 3: Simulaciones y muestreo de la posterior
 
-## Guía 3: Simulaciones y muestreo de la posterior 
+1.  Simular 10000 datos de una distribución Beta(3,7). Graficar un histograma de los datos y la distribución teórica superpuesta. Dar tres medidas de resumen de la distribución usando los datos simulados.
 
-1. Simular 10000 datos de una distribución Beta(3,7). Graficar un histograma de los datos y la distribución teórica superpuesta. Dar tres medidas de resumen de la distribución usando los datos simulados. 
+2.  Repetir el ejercicio 1 para la distribución Gamma(4,2) y para la Normal(4,1).
 
-2. Repetir el ejercicio 1 para la distribución Gamma(4,2) y para la Normal(4,1).
-
-3. Supongamos que tomaron datos $y$ y con un modelo bayesiano llegaron a que la distribución posterior para la probabilidad de que respondan un mail dentro de las 24 horas, $\theta$, es Beta(2,5). Les llega un nuevo mail. ¿Cuál es la probabilidad de que lo respondan en menos de 24 horas? Es decir, se pide $P(\tilde y = 1 \mid y)$, la *posterior predictive*. Resolverlo de dos formas:
+3.  Supongamos que tomaron datos $y$ y con un modelo bayesiano llegaron a que la distribución posterior para la probabilidad de que respondan un mail dentro de las 24 horas, $\theta$, es Beta(2,5). Les llega un nuevo mail. ¿Cuál es la probabilidad de que lo respondan en menos de 24 horas? Es decir, se pide $P(\tilde y = 1 \mid y)$, la *posterior predictive*. Resolverlo de dos formas:
 
     a.  Calculando analíticamente $P(\tilde y = 1 \mid y)$.
-    b.  Simulando datos. Para esto: 
-        i.    Generar 10000 valores simulados del parámetro $\theta$ usando la distribución posterior.
-        ii.   Para cada valor del parámetro $\theta_i$, simular un $y_i$ predicho.
-        iii.  ¿Cuál es la frecuencia de $y=1$ entre los predichos? ¿Coincide con lo calculado en a?.
-        
-4. Supongamos que quieren saber si los mails que reciben los lunes los responden más rápido que los que reciben los sábados. Con datos que recolectan de su propia experiencia llegan a que la distribución posterior para $\theta_L$ es Beta(3,7) (correspondiente a mails que llegan los lunes) y $\theta_S$ es Beta(4,8) para los que llegan los sábados. Para responder la pregunta simulando, sigan estos pasos:
+    b.  Simulando datos. Para esto:
+        i.  Generar 10000 valores simulados del parámetro $\theta$ usando la distribución posterior.
+        ii. Para cada valor del parámetro $\theta_i$, simular un $y_i$ predicho.
+        iii. ¿Cuál es la frecuencia de $y=1$ entre los predichos? ¿Coincide con lo calculado en a?.
+
+4.  Supongamos que quieren saber si los mails que reciben los lunes los responden más rápido que los que reciben los sábados. Con datos que recolectan de su propia experiencia llegan a que la distribución posterior para $\theta_L$ es Beta(3,7) (correspondiente a mails que llegan los lunes) y $\theta_S$ es Beta(4,8) para los que llegan los sábados. Para responder la pregunta simulando, sigan estos pasos:
 
     a.  Simular 10000 valores de $\theta_L$ y $\theta_S$.
     b.  Calcular, para cada para de valores $\theta_L(i)$ y $\theta_S(i)$, la diferencia $\delta_i = \theta_L(i) - \theta_S(i)$.
     c.  Usar las muestras aleatorias $\delta_i$ para responder la pregunta. Por ejemplo, preguntarse por la probabilidad de que esa diferencia sea positiva.
-    
-5. Un jardín botánico tiene tres especies de árboles, A, B y C. El 18% del total de los árboles está infectado con un plaga. Entre los infectados, 15% son A, 80% son B y 5% son C. Entre los no infectados 20% son A, 10% son B y 70% son C. Para monitorear el avance de la plaga, un empleado se acerca a un árbol cualquiera para examinarlo. Para resolver este ejercicio, simular datos de 10000 árboles. 
+
+5.  Un jardín botánico tiene tres especies de árboles, A, B y C. El 18% del total de los árboles está infectado con un plaga. Entre los infectados, 15% son A, 80% son B y 5% son C. Entre los no infectados 20% son A, 10% son B y 70% son C. Para monitorear el avance de la plaga, un empleado se acerca a un árbol cualquiera para examinarlo. Para resolver este ejercicio, simular datos de 10000 árboles.
 
     a.  Cuál es la probabilidad de que el árbol esté infectado (prior)?
     b.  Si resulta que el árbol seleccionado es de la especie B. ¿Qué probabilidad tenía de haber seleccionado uno de esa especie?
@@ -98,29 +97,25 @@ d <- wwc_2019_matches %>%
     d.  Comparar la probabilidad a priori de que el árbol esté infectado con la probabilidad posterior (luego de saber que el árbol seleccionado es de la especie B)?
     e.  Comparar los resultados de las simulaciones con el resultado exacto usando la regla de Bayes.
 
-    
-7.  Implementar el algoritmo de Metropolis-Hastings para conseguir muestras de una distribución $\text{Normal}(\mu=0.4, \sigma=0.6)$. Construir una función que tome como argumento el largo de la cadena (número de muestras), el valor inicial y algún parámetro necesario de la función de propuesta. 
+6.  Implementar el algoritmo de Metropolis-Hastings para conseguir muestras de una distribución $\text{Normal}(\mu=0.4, \sigma=0.6)$. Construir una función que tome como argumento el largo de la cadena (número de muestras), el valor inicial y algún parámetro necesario de la función de propuesta.
 
-8.  (*BayesRules 7.15*) Identificar una pregunta que se pueda responder con un modelo Beta-Binomial para la probabilidad $\theta$ de que ocurra algo. Por ejemplo: proporción de colectivos que vienen llenos cuando vienen a Exactas, etc. 
+7.  (*BayesRules 7.15*) Identificar una pregunta que se pueda responder con un modelo Beta-Binomial para la probabilidad $\theta$ de que ocurra algo. Por ejemplo: proporción de colectivos que vienen llenos cuando vienen a Exactas, etc.
 
     a.  Proponer un prior para $\theta$.
     b.  Juntar datos (de verdad o inventados).
-    c.  Simular 2000 valores de $\theta$ obtenidos con el algoritmo de Metropolis-Hastings. 
+    c.  Simular 2000 valores de $\theta$ obtenidos con el algoritmo de Metropolis-Hastings.
     d.  Graficar la cadena resultante (secuencia de muestras). ¿Están satisfechos con el resultado? ¿A qué hay que estar atentos para aceptar las muestras?
-    
 
-9.  (*BayesRules 7.16*) Identificar una pregunta que se pueda responder con un modelo Normal para $\mu$, un valor medio de interés. Por ejemplo: la temperatura máxima promedio en Otoño en Buenos Aires, el tiempo medio de uso de celular diario, etc. 
+8.  (*BayesRules 7.16*) Identificar una pregunta que se pueda responder con un modelo Normal para $\mu$, un valor medio de interés. Por ejemplo: la temperatura máxima promedio en Otoño en Buenos Aires, el tiempo medio de uso de celular diario, etc.
 
     a.  Proponer un prior para $\mu$.
     b.  Juntar datos (de verdad o inventados).
     c.  Simular 2000 valores de $\mu$ obtenidos con el algoritmo de Metropolis-Hastings. Usar $\sigma$ fijo.
     d.  Graficar la cadena resultante (secuencia de muestras). ¿Están satisfechos con el resultado? ¿A qué hay que estar atentos para aceptar las muestras?
-    
-    
 
 ## Guía 4: Modelo lineal - Introducción a brms
 
-1.   Para el siguiente modelo, simular observaciones $y_{obs}$ con el prior
+1.  Para el siguiente modelo, simular observaciones $y_{obs}$ con el prior
 
 $$
 y \sim \text{Normal}(\mu, \sigma) \\
@@ -128,9 +123,10 @@ y \sim \text{Normal}(\mu, \sigma) \\
 \sigma = \text{Exponencial}(1)
 $$
 
-2.   Escribir el modelo del ejercicio 1 en `brms`.
- 
-3.   Traducir el siguiente modelo (en sintaxis de `brms`) matemáticamente>
+2.  Escribir el modelo del ejercicio 1 en `brms`.
+
+3.  Traducir el siguiente modelo (en sintaxis de `brms`) matemáticamente\>
+
 ```{r eval=FALSE}
 
       family = gaussian, 
@@ -141,13 +137,26 @@ $$
 
 ```
 
-4.   Supongamos que se mide la altura de un grupo de chicos durante tres años. Al cabo de los tres años, se quiere usar un modelo lineal para predecir la altura usando el año como predictora. Escribir la definición matemática para este modelo de regresión, usando los priors que quiera (pero esté preparado para defender la elección de priors.)
+4.  Supongamos que se mide la altura de un grupo de chicos durante tres años. Al cabo de los tres años, se quiere usar un modelo lineal para predecir la altura usando el año como predictora. Escribir la definición matemática para este modelo de regresión, usando los priors que quiera (pero esté preparado para defender la elección de priors.)
 
-5.   Usando el dataset de alturas `Howell1` que viene con el paquete `rethinking`, dar una predicción para la altura de individuos que pesan 46.95, 43.72, 64.78, 32.59 y 54.63 Kg. Dar también un intervalo de credibilidad del 95% para estas predicciones.
+5.  Usando el dataset de alturas `Howell1` que viene con el paquete `rethinking`, dar una predicción para la altura de individuos que pesan 46.95, 43.72, 64.78, 32.59 y 54.63 Kg. Dar también un intervalo de credibilidad del 95% para estas predicciones.
 
-6.   Del mismo dataset, seleccionar sólo los individuos que tienen menos de 18 años. Ajustar con `brms` un modelo de regresión lineal para la altura teniendo como explicativa al peso de los individuos. Graficar los datos y la recta obtenida con los valores medios de la posterior y un intervalo de credibilidad para esos valores. También graficar un intervalo de credibilidad para la altura predicha por el modelo. Todo en el mismo gráfico. ¿Te parece adecuado el modelo? ¿Qué aspectos podrías cambiar para mejorar el modelo?
+6.  Del mismo dataset, seleccionar sólo los individuos que tienen menos de 18 años. Ajustar con `brms` un modelo de regresión lineal para la altura teniendo como explicativa al peso de los individuos. Graficar los datos y la recta obtenida con los valores medios de la posterior y un intervalo de credibilidad para esos valores. También graficar un intervalo de credibilidad para la altura predicha por el modelo. Todo en el mismo gráfico. ¿Te parece adecuado el modelo? ¿Qué aspectos podrías cambiar para mejorar el modelo?
 
- 
+## Guía 5: Regresiones
 
+1.  Usando el dataset `penguins` del paquete [`palmerpenguins`](https://allisonhorst.github.io/palmerpenguins/), estudiar la relación entre el largo de las aletas de los pinguinos (`flipper_length`) y su peso (`body_mass_g`).
 
+    a.  Proponer un modelo en el que el peso tiene una distribución normal con parámetros $\mu$ y $\sigma$, donde $\mu$ se basa en el largo de las aletas.
+    b.  Correr el modelo en STAN usando `brms` o `rstanarm`, eligiendo priors para los parámetros o usando los priors default.
+    c.  Diagnosticar las cadenas de muestras de las posteriores para cada parámetro usando el número efectivo de muestras ($n_{eff}$) y $\hat{R}$.
+    d.  Encontrar la distribución posterior para el peso esperado de un pinguino que tiene una aleta de largo 200 mm. Graficarla y dar medidas resumen.
+    e.  Hacer 500 predicciones del peso de un pinguino con una aleta de largo 200 mm. Graficar la distribución de estos pesos predichos y comparar con el resultado del ítem anterior. ¿A qué se debe la diferencia?
+    f.  Graficar 100 rectas correspondientes al peso esperado de pinguinos con una aleta de largo entre 150 mm y 250 mm. Hacer lo mismo para el peso predicho por el modelo.
 
+2.  Proponer un modelo de regresión logística para clasificar a un pinguino como de la especie Gentoo usando como variable predictora al largo del pico (`bill_length`).
+
+    a.  Correr el modelo y extraer la probabilidad de que un pinguino sea Gentoo si su pico tiene largo 40 mm. (*Ayuda: se puede usar la función `posterior_linpred(transform = TRUE)`*).
+    b.  Graficar la probabilidad de que un pinguino sea Gentoo en función del largo del pico.
+
+3.  Se quiere entender la relación entre el cociente de ancho y largo del pico ($r$, variable respuesta) y el largo de la aleta (variable explicativa). Proponga un modelo (tenga en cuenta el rango posible de valores de $r$ para elegir la distribución de la variable respuesta). Ajustar el modelo y graficar los valores de $r$ predichos por el modelo para un rango de valores para el largo de la aleta entre 170 mm y 240 mm.

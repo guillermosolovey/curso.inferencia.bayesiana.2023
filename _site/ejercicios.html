@@ -128,7 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -170,7 +170,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#guía-1-teorema-de-bayes-y-modelo-beta-binomial" id="toc-guía-1-teorema-de-bayes-y-modelo-beta-binomial" class="nav-link active" data-scroll-target="#guía-1-teorema-de-bayes-y-modelo-beta-binomial">Guía 1: Teorema de Bayes y modelo Beta-Binomial</a></li>
+  <li><a href="#guía-2-familias-conjugadas" id="toc-guía-2-familias-conjugadas" class="nav-link" data-scroll-target="#guía-2-familias-conjugadas">Guía 2: Familias conjugadas</a></li>
+  <li><a href="#guía-3-simulaciones-y-muestreo-de-la-posterior" id="toc-guía-3-simulaciones-y-muestreo-de-la-posterior" class="nav-link" data-scroll-target="#guía-3-simulaciones-y-muestreo-de-la-posterior">Guía 3: Simulaciones y muestreo de la posterior</a></li>
+  <li><a href="#guía-4-modelo-lineal---introducción-a-brms" id="toc-guía-4-modelo-lineal---introducción-a-brms" class="nav-link" data-scroll-target="#guía-4-modelo-lineal---introducción-a-brms">Guía 4: Modelo lineal - Introducción a brms</a></li>
+  <li><a href="#guía-5-regresiones" id="toc-guía-5-regresiones" class="nav-link" data-scroll-target="#guía-5-regresiones">Guía 5: Regresiones</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -326,6 +338,26 @@ y \sim \text{Normal}(\mu, \sigma) \\
 <li><p>Supongamos que se mide la altura de un grupo de chicos durante tres años. Al cabo de los tres años, se quiere usar un modelo lineal para predecir la altura usando el año como predictora. Escribir la definición matemática para este modelo de regresión, usando los priors que quiera (pero esté preparado para defender la elección de priors.)</p></li>
 <li><p>Usando el dataset de alturas <code>Howell1</code> que viene con el paquete <code>rethinking</code>, dar una predicción para la altura de individuos que pesan 46.95, 43.72, 64.78, 32.59 y 54.63 Kg. Dar también un intervalo de credibilidad del 95% para estas predicciones.</p></li>
 <li><p>Del mismo dataset, seleccionar sólo los individuos que tienen menos de 18 años. Ajustar con <code>brms</code> un modelo de regresión lineal para la altura teniendo como explicativa al peso de los individuos. Graficar los datos y la recta obtenida con los valores medios de la posterior y un intervalo de credibilidad para esos valores. También graficar un intervalo de credibilidad para la altura predicha por el modelo. Todo en el mismo gráfico. ¿Te parece adecuado el modelo? ¿Qué aspectos podrías cambiar para mejorar el modelo?</p></li>
+</ol>
+</section>
+<section id="guía-5-regresiones" class="level2">
+<h2 class="anchored" data-anchor-id="guía-5-regresiones">Guía 5: Regresiones</h2>
+<ol type="1">
+<li><p>Usando el dataset <code>penguins</code> del paquete <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code></a>, estudiar la relación entre el largo de las aletas de los pinguinos (<code>flipper_length</code>) y su peso (<code>body_mass_g</code>).</p>
+<ol type="a">
+<li>Proponer un modelo en el que el peso tiene una distribución normal con parámetros <span class="math inline">\(\mu\)</span> y <span class="math inline">\(\sigma\)</span>, donde <span class="math inline">\(\mu\)</span> se basa en el largo de las aletas.</li>
+<li>Correr el modelo en STAN usando <code>brms</code> o <code>rstanarm</code>, eligiendo priors para los parámetros o usando los priors default.</li>
+<li>Diagnosticar las cadenas de muestras de las posteriores para cada parámetro usando el número efectivo de muestras (<span class="math inline">\(n_{eff}\)</span>) y <span class="math inline">\(\hat{R}\)</span>.</li>
+<li>Encontrar la distribución posterior para el peso esperado de un pinguino que tiene una aleta de largo 200 mm. Graficarla y dar medidas resumen.</li>
+<li>Hacer 500 predicciones del peso de un pinguino con una aleta de largo 200 mm. Graficar la distribución de estos pesos predichos y comparar con el resultado del ítem anterior. ¿A qué se debe la diferencia?</li>
+<li>Graficar 100 rectas correspondientes al peso esperado de pinguinos con una aleta de largo entre 150 mm y 250 mm. Hacer lo mismo para el peso predicho por el modelo.</li>
+</ol></li>
+<li><p>Proponer un modelo de regresión logística para clasificar a un pinguino como de la especie Gentoo usando como variable predictora al largo del pico (<code>bill_length</code>).</p>
+<ol type="a">
+<li>Correr el modelo y extraer la probabilidad de que un pinguino sea Gentoo si su pico tiene largo 40 mm. (<em>Ayuda: se puede usar la función <code>posterior_linpred(transform = TRUE)</code></em>).</li>
+<li>Graficar la probabilidad de que un pinguino sea Gentoo en función del largo del pico.</li>
+</ol></li>
+<li><p>Se quiere entender la relación entre el cociente de ancho y largo del pico (<span class="math inline">\(r\)</span>, variable respuesta) y el largo de la aleta (variable explicativa). Proponga un modelo (tenga en cuenta el rango posible de valores de <span class="math inline">\(r\)</span> para elegir la distribución de la variable respuesta). Ajustar el modelo y graficar los valores de <span class="math inline">\(r\)</span> predichos por el modelo para un rango de valores para el largo de la aleta entre 170 mm y 240 mm.</p></li>
 </ol>
 
 
